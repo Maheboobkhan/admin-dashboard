@@ -132,7 +132,7 @@ const Form = () => {
             >
               CTC(in Lakhs)
             </label>
-            <div className="w-full">
+            <div className="w-full flex">
               <input
                 type="number"
                 placeholder="Min"
@@ -202,7 +202,7 @@ const Form = () => {
             >
               Start Date End Date
             </label>
-            <div className="w-full">
+            <div className="w-full flex">
               <Calendar
                 onFocus={toggle1}
                 className={`placeholder:text-gray-950 border border-gray-950 placeholder:text-gray-950 p-1 w-full e w-[50%] ${
@@ -253,7 +253,7 @@ const Form = () => {
             >
               Location
             </label>
-            <div className="w-full">
+            <div className="w-full flex">
               <select
                 className="border border-gray-950 placeholder:text-gray-950 p-1 w-full w-[50%]"
                 id="inputGroupSelect01"
