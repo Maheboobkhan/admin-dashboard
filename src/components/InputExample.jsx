@@ -28,7 +28,7 @@ const InputExample = () => {
   };
   return (
     <>
-      <div class="flex flex-wrap ">
+      <div class="flex flex-wrap">
         <div class="lg:w-full pr-4 pl-4 bg-gray-800">
           <h1 className="text-white bg-gray-800 text-[30px] font-bold">
             Basic Element

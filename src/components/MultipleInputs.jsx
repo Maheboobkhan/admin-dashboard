@@ -1,12 +1,13 @@
 import React, { useState } from "react";
+import "../App.css";
 
-const ButtonChR = () => {
+const MultipleInputs = () => {
   const [isChecked, setChecked] = useState(false);
   const handleToggle = () => {
     setChecked(!isChecked);
   };
   return (
-    <div class="flex flex-wrap ">
+    <div class="flex flex-wrap multiInput">
       <div class="lg:w-full pr-4 pl-4 bg-gray-800">
         <div class="relative min-w-0 rounded break-words border bg-gray-800 border-1 border-gray-300">
           <div class="w-[95%] m-auto py-3 px-6 mb-0 bg-gray-800 border-b-1 border-gray-300 text-white items-center flex justify-between">
@@ -41,7 +42,7 @@ const ButtonChR = () => {
             </div>
           </div>
           <hr />
-          <div class="flex-auto p-6">
+          <div class="flex-auto p-6 sm:flex-col">
             <p class="text-gray-300 mb-[15px]">
               While multiple{" "}
               <code className="text-[#FAA0A0] px-[5px]">&lt;input&gt;</code>s
@@ -50,7 +51,7 @@ const ButtonChR = () => {
               <code className="text-[#FAA0A0] px-[5px]">&lt;input&gt;</code>.
             </p>
             <div class="live-preview">
-              <div class="relative flex items-stretch w-full mb-3">
+              <div class="relative flex items-stretch w-full mb-3 first">
                 <span class="input-group-text border border-gray-300 text-gray-300 bg-gray-700 flex justify-center items-center px-[15px] h-[33.5px] w-[400px]">
                   First and last name
                 </span>
@@ -103,4 +104,4 @@ const ButtonChR = () => {
   );
 };
 
-export default ButtonChR;
+export default MultipleInputs;

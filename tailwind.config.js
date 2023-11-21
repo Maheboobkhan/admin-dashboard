@@ -4,5 +4,10 @@ export default {
   theme: {
     extend: {},
   },
+  screens: {
+    sm: "360px",
+    md: "450px",
+    lg: "768px",
+  },
   plugins: [],
 };

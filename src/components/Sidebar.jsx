@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
+import "../App.css";
 
 const Sidebar = () => {
   const [DashboardDropdownOpen, setDashboardDropdownOpen] = useState(false);
@@ -74,13 +75,13 @@ const Sidebar = () => {
   };
 
   return (
-    <nav className="bg-gray-800 w-[20%] p-4 min-h-screen">
-      <ul className="h-[100%]">
+    <nav className="navbar bg-gray-800 xl:w-[25%] lg:w-[30%] md:w-[30%] sm:w-[30%] xs:w-[30%] p-4">
+      <ul className="">
         {/* Add dropdown for Analytics with arrow icon */}
         {/* 1st dropwdown */}
         <li className="">
           <div className="">
-            <button className="flex items-center justify-between w-full text-gray-300 hover:text-white hover:bg-stone-700 py-[5px] px-[10px] rounded-[10px] active:bg-blue-600">
+            <button className="flex items-center justify-between w-full text-gray-300 hover:text-white hover:bg-stone-700 5 py-[5px] px-[10px] rounded-[10px] active:bg-blue-600">
               <span>Menu</span>
             </button>
           </div>
@@ -89,7 +90,7 @@ const Sidebar = () => {
           <div className="">
             <button
               onClick={toggleDashboardDropdown}
-              className="flex items-center justify-between w-full text-gray-300 hover:text-white hover:bg-stone-700 py-[5px] px-[10px] rounded-[10px] active:bg-blue-600"
+              className="flex items-center justify-between w-full text-gray-300 hover:text-white hover:bg-stone-700 5 py-[5px] px-[10px] rounded-[10px] active:bg-blue-600"
             >
               <span>Dashboards</span>
               <IoIosArrowDown
@@ -105,7 +106,7 @@ const Sidebar = () => {
             DashboardDropdownOpen ? "h-auto opacity-100" : "h-0 opacity-0"
           } transform ${
             DashboardDropdownOpen ? "scale-y-100 mb-[30px]" : "scale-y-0"
-          } origin-top mt-2 w-48 bg-gray-700 p-2 space-y-2`}
+          } origin-top mt-2 ml-4 w-[80%] bg-gray-700 p-2 space-y-2`}
         >
           <a
             href="#"
@@ -155,7 +156,7 @@ const Sidebar = () => {
           <div className="">
             <button
               onClick={toggleAppsDropdown}
-              className="flex items-center justify-between w-full text-gray-300 hover:text-white hover:bg-stone-700 py-[5px] px-[10px] rounded-[10px] active:bg-blue-600"
+              className="flex items-center justify-between w-full text-gray-300 hover:text-white hover:bg-stone-700 5 py-[5px] px-[10px] rounded-[10px] active:bg-blue-600"
             >
               <span>Apps</span>
               <IoIosArrowDown
@@ -170,8 +171,8 @@ const Sidebar = () => {
           className={`transition-all duration-300 ${
             AppsDropdownOpen ? "h-auto opacity-100" : "h-0 opacity-0"
           } transform ${
-            AppsDropdownOpen ? "scale-y-100" : "scale-y-0"
-          } origin-top mt-[10px] w-48 bg-gray-700 p-2 space-y-2`}
+            AppsDropdownOpen ? "scale-y-100 mb-[30px]" : "scale-y-0"
+          } origin-top mt-[10px] ml-4 w-[80%] bg-gray-700 p-2 space-y-2`}
         >
           <a
             href="#"
@@ -270,7 +271,7 @@ const Sidebar = () => {
           <div className="">
             <button
               onClick={toggleLayoutDropdown}
-              className="flex items-center justify-between w-full text-gray-300 hover:text-white hover:bg-stone-700 py-[5px] px-[10px] rounded-[10px] active:bg-blue-600"
+              className="flex items-center justify-between w-full text-gray-300 hover:text-white hover:bg-stone-700 5 py-[5px] px-[10px] rounded-[10px] active:bg-blue-600"
             >
               <span>Layout</span>
               <IoIosArrowDown
@@ -285,8 +286,8 @@ const Sidebar = () => {
           className={`transition-all duration-300 ${
             LayoutDropdownOpen ? "h-auto opacity-100" : "h-0 opacity-0"
           } transform ${
-            LayoutDropdownOpen ? "scale-y-100" : "scale-y-0"
-          } origin-top mt-[10px] w-48 bg-gray-700 p-2 space-y-2`}
+            LayoutDropdownOpen ? "scale-y-100 mb-[30px]" : "scale-y-0"
+          } origin-top mt-[10px] ml-4 w-[80%] bg-gray-700 p-2 space-y-2`}
         >
           <a
             href="#"
@@ -315,7 +316,7 @@ const Sidebar = () => {
         </div>
         {/* 4th dropwdown */}
         <li className="mt-[-25px]">
-          <button className="flex items-center justify-between w-full text-gray-300 hover:text-white hover:bg-stone-700 py-[5px] px-[10px] rounded-[10px] active:bg-blue-600">
+          <button className="flex items-center justify-between w-full text-gray-300 hover:text-white hover:bg-stone-700 5 py-[5px] px-[10px] rounded-[10px] active:bg-blue-600">
             <span>Pages</span>
           </button>
         </li>
@@ -324,7 +325,7 @@ const Sidebar = () => {
           <div className="">
             <button
               onClick={togglePagesDropdown}
-              className="flex items-center justify-between w-full text-gray-300 hover:text-white hover:bg-stone-700 py-[5px] px-[10px] rounded-[10px] active:bg-blue-600"
+              className="flex items-center justify-between w-full text-gray-300 hover:text-white hover:bg-stone-700 5 py-[5px] px-[10px] rounded-[10px] active:bg-blue-600"
             >
               <span>Authentication</span>
               <IoIosArrowDown
@@ -339,8 +340,8 @@ const Sidebar = () => {
           className={`transition-all duration-300 ${
             PagesDropdownOpen ? "h-auto opacity-100" : "h-0 opacity-0"
           } transform ${
-            PagesDropdownOpen ? "scale-y-100" : "scale-y-0"
-          } origin-top mt-[10px] w-48 bg-gray-700 p-2 space-y-2`}
+            PagesDropdownOpen ? "scale-y-100 mb-[30px]" : "scale-y-0"
+          } origin-top mt-[10px] ml-4 w-[80%] bg-gray-700 p-2 space-y-2`}
         >
           <a
             href="#"
@@ -403,7 +404,7 @@ const Sidebar = () => {
           <div className="">
             <button
               onClick={toggleAuthDropdown}
-              className="flex items-center justify-between w-full text-gray-300 hover:text-white hover:bg-stone-700 py-[5px] px-[10px] rounded-[10px] active:bg-blue-600"
+              className="flex items-center justify-between w-full text-gray-300 hover:text-white hover:bg-stone-700 5 py-[5px] px-[10px] rounded-[10px] active:bg-blue-600"
             >
               <span>Pages</span>
               <IoIosArrowDown
@@ -418,8 +419,8 @@ const Sidebar = () => {
           className={`transition-all duration-300 ${
             authDropdownOpen ? "h-auto opacity-100" : "h-0 opacity-0"
           } transform ${
-            authDropdownOpen ? "scale-y-100" : "scale-y-0"
-          } origin-top mt-[10px] w-48 bg-gray-700 p-2 space-y-2`}
+            authDropdownOpen ? "scale-y-100 mb-[30px]" : "scale-y-0"
+          } origin-top mt-[10px] ml-4 w-[80%] bg-gray-700 p-2 space-y-2`}
         >
           <a
             href="#"
@@ -506,7 +507,7 @@ const Sidebar = () => {
           <div className="">
             <button
               onClick={toggleLandingDropdown}
-              className="flex items-center justify-between w-full text-gray-300 hover:text-white hover:bg-stone-700 py-[5px] px-[10px] rounded-[10px] active:bg-blue-600"
+              className="flex items-center justify-between w-full text-gray-300 hover:text-white hover:bg-stone-700 5 py-[5px] px-[10px] rounded-[10px] active:bg-blue-600"
             >
               <span>Landing</span>
               <IoIosArrowDown
@@ -522,7 +523,7 @@ const Sidebar = () => {
             LandingDropdownOpen ? "h-auto opacity-100" : "h-0 opacity-0"
           } transform ${
             LandingDropdownOpen ? "scale-y-100 mb-[30px]" : "scale-y-0"
-          } origin-top mt-[10px] w-48 bg-gray-700 p-2 space-y-2`}
+          } origin-top mt-[10px] ml-4 w-[80%] bg-gray-700 p-2 space-y-2`}
         >
           <a
             href="#"
@@ -546,7 +547,7 @@ const Sidebar = () => {
 
         {/* 8th dropdown */}
         <li className="mt-[-25px]">
-          <button className="flex items-center justify-between w-full text-gray-300 hover:text-white hover:bg-stone-700 py-[5px] px-[10px] rounded-[10px] active:bg-blue-600">
+          <button className="flex items-center justify-between w-full text-gray-300 hover:text-white hover:bg-stone-700 5 py-[5px] px-[10px] rounded-[10px] active:bg-blue-600">
             <span>Components</span>
           </button>
         </li>
@@ -556,7 +557,7 @@ const Sidebar = () => {
           <div className="">
             <button
               onClick={toggleBaseDropdown}
-              className="flex items-center justify-between w-full text-gray-300 hover:text-white hover:bg-stone-700 py-[5px] px-[10px] rounded-[10px] active:bg-blue-600"
+              className="flex items-center justify-between w-full text-gray-300 hover:text-white hover:bg-stone-700 5 py-[5px] px-[10px] rounded-[10px] active:bg-blue-600"
             >
               <span>Base UI</span>
               <IoIosArrowDown
@@ -571,8 +572,8 @@ const Sidebar = () => {
           className={`transition-all duration-300 ${
             BaseDropdownOpen ? "h-auto opacity-100" : "h-0 opacity-0"
           } transform ${
-            BaseDropdownOpen ? "scale-y-100" : "scale-y-0"
-          } origin-top mt-[10px] w-48 bg-gray-700 p-2 space-y-2`}
+            BaseDropdownOpen ? "scale-y-100 mb-[30px]" : "scale-y-0"
+          } origin-top mt-[10px] ml-4 w-[80%] bg-gray-700 p-2 space-y-2`}
         >
           <a
             href="#"
@@ -629,7 +630,7 @@ const Sidebar = () => {
           <div className="">
             <button
               onClick={toggleAdvanceDropdown}
-              className="flex items-center justify-between w-full text-gray-300 hover:text-white hover:bg-stone-700 py-[5px] px-[10px] rounded-[10px] active:bg-blue-600"
+              className="flex items-center justify-between w-full text-gray-300 hover:text-white hover:bg-stone-700 5 py-[5px] px-[10px] rounded-[10px] active:bg-blue-600"
             >
               <span>Advance UI</span>
               <IoIosArrowDown
@@ -645,7 +646,7 @@ const Sidebar = () => {
             AdvanceDropdownOpen ? "h-auto opacity-100" : "h-0 opacity-0"
           } transform ${
             AdvanceDropdownOpen ? "scale-y-100 mb-[30px]" : "scale-y-0"
-          } origin-top mt-[10px] w-48 bg-gray-700 p-2 space-y-2`}
+          } origin-top mt-[10px] ml-4 w-[80%] bg-gray-700 p-2 space-y-2`}
         >
           <a
             href="#"
@@ -705,7 +706,7 @@ const Sidebar = () => {
 
         {/* 11th dropdown */}
         <li className="mt-[-25px]">
-          <button className="flex items-center justify-between w-full text-gray-300 hover:text-white hover:bg-stone-700 py-[5px] px-[10px] rounded-[10px] active:bg-blue-600">
+          <button className="flex items-center justify-between w-full text-gray-300 hover:text-white hover:bg-stone-700 5 py-[5px] px-[10px] rounded-[10px] active:bg-blue-600">
             <span>Widgets</span>
           </button>
         </li>
@@ -715,7 +716,7 @@ const Sidebar = () => {
           <div className="">
             <button
               onClick={toggleFormDropdown}
-              className="flex items-center justify-between w-full text-gray-300 hover:text-white hover:bg-stone-700 py-[5px] px-[10px] rounded-[10px] active:bg-blue-600"
+              className="flex items-center justify-between w-full text-gray-300 hover:text-white hover:bg-stone-700 5 py-[5px] px-[10px] rounded-[10px] active:bg-blue-600"
             >
               <span>Forms</span>
               <IoIosArrowDown
@@ -731,7 +732,7 @@ const Sidebar = () => {
             FormDropdownOpen ? "h-auto opacity-100" : "h-0 opacity-0"
           } transform ${
             FormDropdownOpen ? "scale-y-100 mb-[30px]" : "scale-y-0"
-          } origin-top mt-[10px] w-48 bg-gray-700 p-2 space-y-2`}
+          } origin-top mt-[10px] ml-4 w-[80%] bg-gray-700 p-2 space-y-2`}
         >
           <a
             href="#"
@@ -817,7 +818,7 @@ const Sidebar = () => {
           <div className="">
             <button
               onClick={toggleTableDropdown}
-              className="flex items-center justify-between w-full text-gray-300 hover:text-white hover:bg-stone-700 py-[5px] px-[10px] rounded-[10px] active:bg-blue-600"
+              className="flex items-center justify-between w-full text-gray-300 hover:text-white hover:bg-stone-700 5 py-[5px] px-[10px] rounded-[10px] active:bg-blue-600"
             >
               <span>Tables</span>
               <IoIosArrowDown
@@ -833,7 +834,7 @@ const Sidebar = () => {
             TableDropdownOpen ? "h-auto opacity-100" : "h-0 opacity-0"
           } transform ${
             TableDropdownOpen ? "scale-y-100 mb-[30px]" : "scale-y-0"
-          } origin-top mt-[10px] w-48 bg-gray-700 p-2 space-y-2`}
+          } origin-top mt-[10px] ml-4 w-[80%] bg-gray-700 p-2 space-y-2`}
         >
           <a
             href="#"
@@ -866,7 +867,7 @@ const Sidebar = () => {
           <div className="">
             <button
               onClick={toggleChartDropdown}
-              className="flex items-center justify-between w-full text-gray-300 hover:text-white hover:bg-stone-700 py-[5px] px-[10px] rounded-[10px] active:bg-blue-600"
+              className="flex items-center justify-between w-full text-gray-300 hover:text-white hover:bg-stone-700 5 py-[5px] px-[10px] rounded-[10px] active:bg-blue-600"
             >
               <span>Charts</span>
               <IoIosArrowDown
@@ -882,7 +883,7 @@ const Sidebar = () => {
             ChartDropdownOpen ? "h-auto opacity-100" : "h-0 opacity-0"
           } transform ${
             ChartDropdownOpen ? "scale-y-100 mb-[30px]" : "scale-y-0"
-          } origin-top mt-[10px] w-48 bg-gray-700 p-2 space-y-2`}
+          } origin-top mt-[10px] ml-4 w-[80%] bg-gray-700 p-2 space-y-2`}
         >
           <a
             href="#"
@@ -914,7 +915,7 @@ const Sidebar = () => {
           <div className="">
             <button
               onClick={toggleIconDropdown}
-              className="flex items-center justify-between w-full text-gray-300 hover:text-white hover:bg-stone-700 py-[5px] px-[10px] rounded-[10px] active:bg-blue-600"
+              className="flex items-center justify-between w-full text-gray-300 hover:text-white hover:bg-stone-700 5 py-[5px] px-[10px] rounded-[10px] active:bg-blue-600"
             >
               <span>Icons</span>
               <IoIosArrowDown
@@ -930,7 +931,7 @@ const Sidebar = () => {
             IconDropdownOpen ? "h-auto opacity-100" : "h-0 opacity-0"
           } transform ${
             IconDropdownOpen ? "scale-y-100 mb-[30px]" : "scale-y-0"
-          } origin-top mt-[10px] w-48 bg-gray-700 p-2 space-y-2`}
+          } origin-top mt-[10px] ml-4 w-[80%] bg-gray-700 p-2 space-y-2`}
         >
           <a
             href="#"
@@ -975,7 +976,7 @@ const Sidebar = () => {
           <div className="">
             <button
               onClick={toggleMapDropdown}
-              className="flex items-center justify-between w-full text-gray-300 hover:text-white hover:bg-stone-700 py-[5px] px-[10px] rounded-[10px] active:bg-blue-600"
+              className="flex items-center justify-between w-full text-gray-300 hover:text-white hover:bg-stone-700 5 py-[5px] px-[10px] rounded-[10px] active:bg-blue-600"
             >
               <span>Maps</span>
               <IoIosArrowDown
@@ -991,7 +992,7 @@ const Sidebar = () => {
             MapDropdownOpen ? "h-auto opacity-100" : "h-0 opacity-0"
           } transform ${
             MapDropdownOpen ? "scale-y-100 mb-[30px]" : "scale-y-0"
-          } origin-top mt-[10px] w-48 bg-gray-700 p-2 space-y-2`}
+          } origin-top mt-[10px] ml-4 w-[80%] bg-gray-700 p-2 space-y-2`}
         >
           <a
             href="#"
@@ -1018,7 +1019,7 @@ const Sidebar = () => {
           <div className="">
             <button
               onClick={toggleMultiDropdown}
-              className="flex items-center justify-between w-full text-gray-300 hover:text-white hover:bg-stone-700 py-[5px] px-[10px] rounded-[10px] active:bg-blue-600"
+              className="flex items-center justify-between w-full text-gray-300 hover:text-white hover:bg-stone-700 5 py-[5px] px-[10px] rounded-[10px] active:bg-blue-600"
             >
               <span>Multi Level</span>
               <IoIosArrowDown
@@ -1034,7 +1035,7 @@ const Sidebar = () => {
             MultiDropdownOpen ? "h-auto opacity-100" : "h-0 opacity-0"
           } transform ${
             MultiDropdownOpen ? "scale-y-100 mb-[30px]" : "scale-y-0"
-          } origin-top mt-[10px] w-48 bg-gray-700 p-2 space-y-2`}
+          } origin-top mt-[10px] ml-4 w-[80%] bg-gray-700 p-2 space-y-2`}
         >
           <a
             href="#"
