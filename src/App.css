@@ -1,8 +1,12 @@
-@media only screen and (max-width: 640px) and (min-width: 360px) {
-    .navbar{
-        width: 45%;
+/* @media only screen and (max-width: 640px) and (min-width: 360px) {
+    .cont{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        
     }
-    .profile-name{
-        font-size: 12px;
+    .cont-1{
+        width: 100%;
+        border: 1px solid red;
     }
-}
+} */
